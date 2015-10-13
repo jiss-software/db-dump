@@ -16,7 +16,7 @@ def rm(target):
     os.system('rm -r %s' % target)
     
     
-def mv(target, out)
+def mv(target, out):
     os.system('mv %s %s' % (target, out))
 
 # Execution
