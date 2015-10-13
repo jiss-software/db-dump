@@ -14,8 +14,8 @@ def archivate(target, out):
 
 def rm(target):
     os.system('rm -r %s' % target)
-    
-    
+
+
 def mv(target, out):
     os.system('mv %s %s' % (target, out))
 
@@ -31,6 +31,7 @@ if 'mongodb' in config:
     name = archivate('./tmp/*', name)
     rm('./tmp')
     mv(name, mongodbConfig['out'])
-    
+
 if 'mysql' in config:
     # TODO: implement dump
+    pass
