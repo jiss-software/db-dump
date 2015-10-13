@@ -19,6 +19,11 @@ def rm(target):
 def mv(target, out):
     os.system('mv %s %s' % (target, out))
 
+
+def ln(target, out):
+    os.system('ln -s %s --target-directory="%s"' % (target, out))
+
+
 # Execution
 root_dir = os.path.dirname(os.path.abspath(__file__))
 with open(root_dir + '/config.json') as f:
@@ -31,6 +36,10 @@ if 'mongodb' in config:
     name = archivate('./tmp/*', name)
     rm('./tmp')
     mv(name, mongodbConfig['out'])
+    
+    if 'distribution' in config:
+        ln('%s/%s' % (mongodbConfig['out'], name), config['distribution'])
+
 
 if 'mysql' in config:
     # TODO: implement dump
