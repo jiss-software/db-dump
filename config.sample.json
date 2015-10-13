@@ -1,0 +1,11 @@
+{
+    "mongodb": {
+        "rs": "main",
+        "hosts": [
+            "mongodb-01:27017",
+            "mongodb-02:27017",
+            "mongodb-03:27017"
+        ],
+        "out": "/var/dump/mongodb"
+    }
+}
