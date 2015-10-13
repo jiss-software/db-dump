@@ -1,8 +1,9 @@
 #!/bin/bash
 
-rm -r ./tmp
+cd ${0%/*}
 
-[! -d ./log ] && mkdir ./log
+[ -d ./tmp ] && rm -r ./tmp
+[ ! -d ./log ] && mkdir ./log
 
 [ -f ./log/error.log ] && rm ./log/error.log
 [ -f ./log/main.log ] && rm ./log/main.log
