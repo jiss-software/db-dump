@@ -21,7 +21,7 @@ def mv(target, out):
 
 # Execution
 root_dir = os.path.dirname(os.path.abspath(__file__))
-with open(root_dir + 'config.json') as f:
+with open(root_dir + '/config.json') as f:
     config = json.load(f)
 
 if 'mongodb' in config:
