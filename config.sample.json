@@ -5,7 +5,13 @@
             "mongodb-01:27017",
             "mongodb-02:27017",
             "mongodb-03:27017"
-        ],
-        "out": "/var/dump"
-    }
+        ]
+    },
+
+    "mariadb": {
+        "host": "mariadb-01"
+    },
+
+    "out": "/var/dump",
+    "distribution": "/var/remote/storage"
 }
