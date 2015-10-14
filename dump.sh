@@ -5,6 +5,8 @@ cd ${0%/*}
 [ -d ./tmp ] && rm -r ./tmp
 [ ! -d ./log ] && mkdir ./log
 
+mkdir ./tmp
+
 [ -f ./log/error.log ] && rm ./log/error.log
 [ -f ./log/main.log ] && rm ./log/main.log
 
